@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- Salutations -->
+  <category>
+    <pattern>*</pattern>
+    <template>
+        I'm sorry I don't understand that answer.
+        <split/>
+        <delay>2</delay>
+        You can type 'Hello' to begin a dialog or modify your previous 
+        input.
+    </template>
+  </category>
+  <category>
+    <pattern><set>greetings</set></pattern>
+    <template>
+        Hello! My name is SCAB. The Student Career Advisor Bot.
+        <delay>3</delay>
+        <split/>
+        I match current students with prospective job opportunities.
+        <delay>4</delay>
+        <split/>
+        Would you like help determining a career path?
+    </template>
+  </category>
+  <!-- End Salutations -->
+  
+  <!-- Yes No Answers -->
+  <category>
+    <pattern>YES</pattern>
+    <template>
+        Fantastic! Please tell me what area interests you.
+        <delay>3</delay>
+        <split/>
+        Keep in mind that your choice probably needs to align 
+        with your degree path.
+        <delay>3</delay>
+        <ul>
+            <li>Programming</li>
+            <li>Administration</li>
+            <li>Security</li>
+        </ul>
+    </template>
+  </category>
+  <category>
+      <pattern>INTERESTS</pattern>
+      <template>
+        Please tell me what area interests you.
+        <delay>3</delay>
+        <ul>
+            <li>Programming</li>
+            <li>Administration</li>
+            <li>Security</li>
+        </ul>
+      </template>
+  </category>
+  <category>
+        <pattern>NO</pattern>
+        <template>
+            That's ok.
+            <split/>
+            <delay>2</delay>
+            Just initiate a conversation with me by typing 'Hello' 
+            if you change your mind.
+        </template>
+  </category>
+  <!-- End Yes No Answers -->
+  
+  <!-- Main Categories -->
+  <category>
+      <pattern>PROGRAMMING</pattern>
+      <template>
+          What kind of programming do you think you would enjoy doing?
+          <delay>3</delay>
+          <ul>
+              <li>Mobile</li>
+              <li>Website</li>
+              <li>Desktop</li>
+          </ul>
+      </template>
+  </category>
+  <category>
+      <pattern>ADMINISTRATION</pattern>
+      <template>
+          What kind of Administration are you interested in?
+          <delay>3</delay>
+          <ul>
+              <li>System Admin</li>
+              <li>Database Admin</li>
+              <li>Network Admin</li>
+          </ul>
+      </template>
+  </category>
+  <category>
+      <pattern>SECURITY</pattern>
+      <template>
+          What kind of Security are you interested in?
+          <delay>3</delay>
+          <ul>
+              <li>Cyber Security</li>
+              <li>Network Security</li>
+          </ul>
+      </template>
+  </category>
+  <!-- End Main Categories -->
+  
+  <!-- Programming Replies -->
+  <category>
+      <pattern>MOBILE</pattern>
+      <template>
+          You should look into the role of Mobile Applications Developer.
+          <delay>3</delay>
+          <split/>
+          Take a look at the responsibilities of a Mobile Applications Developer
+          to make sure this sounds like it would interest you!
+          <split/>
+          <delay>3</delay>
+          Mobile Application Developers develop applications intended 
+          to be used on mobile devices such as Phones, Tablets, and 
+          other handheld devices.
+      </template>
+  </category>
+  <category>
+      <pattern>WEBSITE</pattern>
+      <template>
+          Web Development may be suitable in your case.
+          <split/>
+          <delay>3</delay>
+          Take a look at the responsibilities of a Web Developer
+          to make sure this sounds like it would interest you!
+          <delay>3</delay>
+          <split/>
+          A Web Developer is responsible for designing, implementing, and
+          potentially maintain a customers website. A web developer takes into 
+          account User Experience and Function, and does require a bit of graphic
+          design inclination.
+      </template>
+  </category>
+  <category>
+      <pattern>DESKTOP</pattern>
+      <template>
+          Developing Desktop Applications may be right down your alley!
+          <split/>
+          <delay>3</delay>
+          Take a look at the responsibilities of a Desktop Applications Developer
+          to make sure this sounds like it would interest you!
+          <delay>3</delay>
+          <split/>
+          A Desktop Application Developer is responsible for interpreting
+          software requirements into a working application. Most Desktop
+          Application Developers specialize into one type of software category,
+          such as, accounting software, document processing, and potentially
+          graphics software.
+      </template>
+  </category>
+  <!-- End Programming Replies -->
+  
+  <!-- Administration Replies -->
+    <category>
+        <pattern><set>systemadmins</set></pattern>
+        <template>
+            System Administrators maintain software and hardware by 
+            installing, updating, and monitoring Operating Systems, 
+            applications, security tools, and other systems to maintain stability.
+        </template>
+    </category>
+    <category>
+        <pattern><set>databaseadmins</set></pattern>
+        <template>
+            Database Administrators install and maintain databases by
+            developing optimization processes, maintaining permissions, and
+            creating update and management standards for all managed databases.
+        </template>
+    </category>
+    <category>
+        <pattern>NETWORK ADMIN</pattern>
+        <template>
+            Network Administrators are typically in charge of maintaining
+            computer networks and solving issues with them. Some areas of
+            responsibility include, installation of computer networks,
+            identifying network issues, and solving network issues.
+        </template>
+    </category>
+  <!-- End Administration Replies -->
+  
+  <!-- Security Replies -->
+  <category>
+      <pattern>CYBER SECURITY</pattern>
+      <template>
+          Cyber Security Analysts are in charge of protecting internet 
+          connected systems and networks from outside attacks.
+      </template>
+  </category>
+  <category>
+      <pattern>NETWORK SECURITY</pattern>
+      <template>
+          Network security Analysts are generally in charge of
+          protecting files and directories in a network of computers 
+          against misuse, hacking, and unauthorized access to the network.
+      </template>
+  </category>
+  <!-- End Security Replies -->
+</aiml>
